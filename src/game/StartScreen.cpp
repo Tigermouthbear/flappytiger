@@ -68,6 +68,7 @@ void StartScreen::handleKeys(Window* window, int key, int code, int action, int 
                 window->close();
                 break;
 
+            case GLFW_KEY_KP_ENTER:
             case GLFW_KEY_ENTER:
                 flappyTiger->openScreen(new IngameScreen(flappyTiger));
                 break;
