@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=FlappyTiger
+Categories=Graphics;Games;
+Comment=The coolest flappybird clone
+Exec=flappytiger
+Icon=flappytiger
+Terminal=false
