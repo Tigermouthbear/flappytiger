@@ -63,15 +63,8 @@ void StartScreen::handleMouse(Window* window, double mouseX, double mouseY) {
 
 void StartScreen::handleKeys(Window* window, int key, int code, int action, int mode) {
     if(action == GLFW_PRESS) {
-        switch(key) {
-            case GLFW_KEY_ESCAPE:
-                window->close();
-                break;
-
-            case GLFW_KEY_KP_ENTER:
-            case GLFW_KEY_ENTER:
-                flappyTiger->openScreen(new IngameScreen(flappyTiger));
-                break;
-        }
+        if(code == glfwGetKeyScancode(GLFW_KEY_ESCAPE)) window->close();
+        else if(code == glfwGetKeyScancode(GLFW_KEY_ENTER) || code == glfwGetKeyScancode(GLFW_KEY_KP_ENTER))
+            flappyTiger->openScreen(new IngameScreen(flappyTiger));
     }
 }

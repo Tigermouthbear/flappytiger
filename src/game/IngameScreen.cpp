@@ -164,18 +164,13 @@ void IngameScreen::handleMouse(Window* window, double mouseX, double mouseY) {
 
 void IngameScreen::handleKeys(Window* window, int key, int code, int action, int mode) {
     if(action == GLFW_PRESS) {
-        switch(key) {
-            case GLFW_KEY_ESCAPE:
-                flappyTiger->openScreen(new StartScreen(flappyTiger));
-                break;
-
-            case GLFW_KEY_SPACE:
-                if(gameState == WAITING) {
-                    gameState = PLAYING;
-                    animTime = 0; // make sure animation timer is reset
-                }
-                if(gameState == PLAYING) bird.motionY = 6.5;
-                break;
+        if(code == glfwGetKeyScancode(GLFW_KEY_ESCAPE)) window->close();
+        else if(code == glfwGetKeyScancode(GLFW_KEY_SPACE)) {
+            if(gameState == WAITING) {
+                gameState = PLAYING;
+                animTime = 0; // make sure animation timer is reset
+            }
+            if(gameState == PLAYING) bird.motionY = 6.5;
         }
     }
 }
