@@ -5,9 +5,8 @@ The flappybird clone you definately dont need. This is my first game written in 
 ## Building
 Linux:
 ```
-git clone https://github.com/Tigermouthbear/flappytiger.git
+git clone --recurse-submodules https://github.com/Tigermouthbear/flappytiger.git
 cd flappytiger
-git submodule update --init --recursive
 mkdir build && cd build
 cmake ..
 make
@@ -20,9 +19,8 @@ Steps not provided, but it should build on other systems too
 ## Installing (Linux)
 Linux:
 ```
-git clone https://github.com/Tigermouthbear/flappytiger.git
+git clone --recurse-submodules https://github.com/Tigermouthbear/flappytiger.git
 cd flappytiger
-git submodule update --init --recursive
 mkdir build && cd build
 cmake -DINSTALL_APP=ON ..
 make
