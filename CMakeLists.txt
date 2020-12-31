@@ -5,6 +5,7 @@ set(GLFW_SOURCE_DIR "external/glfw")
 set(GLM_SOURCE_DIR "external/glm")
 set(GLEW_SOURCE_DIR "external/glew")
 set(FT_SOURCE_DIR "external/freetype2")
+set (CMAKE_CXX_STANDARD 11)
 
 find_package(OpenGL REQUIRED)
 
