@@ -8,8 +8,8 @@
 
 IngameScreen::IngameScreen(FlappyTiger* flappyTiger): Screen(flappyTiger) {
     // add pipes
-    pipes.push_back({ 600, (double) (std::rand() % 426 + 100) });
-    pipes.push_back({ 925, (double) (std::rand() % 426 + 100) });
+    pipes.emplace_back(600, (double) (std::rand() % 426 + 100));
+    pipes.emplace_back(925, (double) (std::rand() % 426 + 100));
 }
 
 void IngameScreen::render(float delta) {
@@ -152,8 +152,8 @@ void IngameScreen::reset() {
 
     // reset pipes
     pipes.clear();
-    pipes.push_back({ 600, (double) (std::rand() % 426 + 100) });
-    pipes.push_back({ 925, (double) (std::rand() % 426 + 100) });
+    pipes.emplace_back(600, (double) (std::rand() % 426 + 100));
+    pipes.emplace_back(925, (double) (std::rand() % 426 + 100));
 
     // reset bird
     bird = { 550 / 2.0,  700 / 2.0, 0, 40, 20 };

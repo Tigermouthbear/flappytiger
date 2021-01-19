@@ -27,6 +27,11 @@ private:
         double width = 100;
         double openingHeight = 200;
         bool counted = false;
+
+        Pipe(int x, double y) {
+            X = x;
+            openingY = y;
+        }
     };
 
     int gameState = WAITING;
