@@ -1,5 +1,5 @@
 # FlappyTiger
-The flappybird clone you definately dont need. This is my first game written in C++ using glfw.
+The flappybird clone you definitely dont need. This is my first game written in C++ using glfw.
 
 ## Installing (Linux)
 Arch:
