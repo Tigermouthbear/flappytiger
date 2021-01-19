@@ -48,7 +48,7 @@ void StartScreen::render(float delta) {
             glm::vec3(0, 0, 0)
     );
 
-    text = "Press Enter to Begin";
+    text = "Press Any Key to Begin";
     flappyTiger->fontRenderer->drawString(
             text,
             0 - flappyTiger->fontRenderer->getStringWidth(text, 0.002F) / 2,
@@ -64,7 +64,6 @@ void StartScreen::handleMouse(Window* window, double mouseX, double mouseY) {
 void StartScreen::handleKeys(Window* window, int key, int code, int action, int mode) {
     if(action == GLFW_PRESS) {
         if(code == glfwGetKeyScancode(GLFW_KEY_ESCAPE)) window->close();
-        else if(code == glfwGetKeyScancode(GLFW_KEY_ENTER) || code == glfwGetKeyScancode(GLFW_KEY_KP_ENTER))
-            flappyTiger->openScreen(new IngameScreen(flappyTiger));
+        else flappyTiger->openScreen(new IngameScreen(flappyTiger));
     }
 }

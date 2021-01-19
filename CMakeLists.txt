@@ -32,7 +32,7 @@ if(MSVC)
     SET( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /ENTRY:mainCRTStartup" )
 endif()
 
-add_executable(flappytiger WIN32
+add_executable(flappytiger
         src/main.cpp
         src/FlappyTiger.h src/FlappyTiger.cpp
         src/render/buffer/Point.h

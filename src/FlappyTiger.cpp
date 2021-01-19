@@ -63,7 +63,7 @@ void FlappyTiger::run() {
             fpsLastTime += 1.0;
         }
 
-        // update viewport
+        // include <iostream>update viewport
         double width = (double) window->getHeight() / 700 * 550;
         glViewport((double) window->getWidth() / 2 - width / 2, 0, width, window->getHeight());
 
